@@ -4,16 +4,21 @@ class Solution {
         {
             return false;
         }
-        int org=x;
+        int n=x;
         int rev=0;
-        while(x!=0)
+        while(n>0)
         {
-            int t=x%10;
-            rev=rev*10+t;
-            x=x/10;
+            int d=n%10;
+            rev=rev*10+d;
+            n=n/10;
         }
-
-        return org==rev;
-
+        if(rev==x)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
